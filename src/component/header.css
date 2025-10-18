@@ -1,0 +1,35 @@
+.header {
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--header-text);
+}
+
+.hamburger-btn {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--header-text);
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: block;
+    }
+    .header-title {
+        font-size: 1.75rem;
+    }
+    .header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    }
+}

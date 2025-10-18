@@ -1,0 +1,45 @@
+/* src/App.css */
+:root {
+  --background-color: #f4f7f9;
+  --sidebar-bg: #1f2937;
+  --sidebar-text: #d1d5db;
+  --sidebar-active: #4f46e5;
+  --header-text: #111827;
+  --card-bg: #ffffff;
+  --card-text: #374151;
+  --card-text-completed: #9ca3af;
+  --button-bg: #4f46e5;
+  --input-border: #b5becb;
+}
+
+.dark {
+  --background-color: #111827;
+  --sidebar-bg: #1f2937; /* Sidebar dark me same rahega */
+  --sidebar-text: #d1d5db;
+  --sidebar-active: #4f46e5;
+  --header-text: #f9fafb;
+  --card-bg: #1f2937;
+  --card-text: #d1d5db;
+  --card-text-completed: #6b7280;
+  --button-bg: #4f46e5;
+  --input-border: #4b5563;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--background-color); /* Halkaa sa grey background */
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+}

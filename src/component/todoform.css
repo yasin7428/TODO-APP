@@ -1,0 +1,44 @@
+/* src/components/TodoForm.css */
+
+.todo-form {
+  display: flex; /* Input aur button ko side-by-side rakhega */
+  gap: 1rem; /* Beech me thodi jagah dega */
+  margin-bottom: 2rem; /* Form ke neeche space */
+}
+
+.todo-input {
+  flex: 1; /* Poori available width le lega */
+  padding: 0.75rem 1rem;
+  color: var(--card-text);
+  font-size: 1rem;
+  border: 1px solid #d1d5db; /* Halki si border */
+  border-radius: 8px; /* Kone gol karega */
+  transition: border-color 0.2s;
+}
+
+.todo-input:focus {
+  outline: none; /* Default focus outline hatayega */
+  border-color: var(--input-border); /* Focus par border color badlega (wahi jo sidebar me use hua) */
+}
+
+.todo-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #4f46e5; /* Sidebar wala primary color */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.todo-button:hover {
+  background-color: #4338ca; /* Hover par thoda dark color */
+}
+
+@media (max-width: 768px) {
+  .todo-form {
+    flex-direction: column; 
+  }
+}

@@ -1,0 +1,71 @@
+/* src/components/DetailsPanel.css */
+.details-panel {
+  width: 320px;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-left: 1px solid var(--input-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--header-text);
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--input-border);
+  padding-bottom: 1rem;
+}
+
+.panel-section-title {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--card-text-completed);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.notes-textarea {
+  width: 100%;
+  min-height: 120px;
+  background-color: var(--background-color);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--card-text);
+  resize: vertical;
+}
+
+.close-button {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--header-text);
+  cursor: pointer
+}
+
+@media (max-width: 768px) {
+  .details-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 80%;
+    max-width: 320px;
+    z-index: 1000;
+    transform: translateX(100%); /* Right se bahar rakho */
+    transition: transform 0.3s ease-in-out;
+  }
+  .details-panel.open {
+    transform: translateX(0);
+  }
+  .close-button {
+    display: block;
+  }
+}
+

@@ -1,0 +1,12 @@
+.workspace {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    width: 100%;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,94 @@
+/* src/components/Sidebar.css */
+
+.sidebar {
+  width: 260px;
+  background-color: var(--sidebar-bg); /* Dark background color */
+  color: var(--sidebar-text); /* Light grey text color */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin-right: 0.5rem;
+}
+
+.sidebar-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--sidebar-text); /* White color for title */
+  margin-bottom: 2rem;
+}
+
+.filter-list {
+  list-style: none; /* Removes bullet points */
+}
+
+.filter-item {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s; /* Smooth hover effect */
+}
+
+.filter-item:hover {
+  background-color: #374151; /* Darker hover background */
+}
+
+.filter-item.active {
+  background-color: #4f46e5; /* Active item background color (e.g., blue) */
+  color: #ffffff;
+}
+
+.theme-toggle-button {
+  background-color: var(--sidebar-active);
+  color: var(--sidebar-text);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed; /* Taaki ye content ke upar aaye */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%; /* Screen ki 80% width le */
+    max-width: 300px;
+    z-index: 1000; /* Sabse upar rahe */
+    transform: translateX(-100%); /* Shuru me screen se bahar rakho */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+    display: flex; /* Ye pehle se hoga, just ensure it's there */
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Jab 'open' class lage, to screen par le aao */
+  }
+
+  .close-btn {
+    display: block; /* Mobile par close button dikhao */
+    background: none;
+    border: none;
+    color: var(--sidebar-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .sidebar-title {
+    margin-bottom: 0;
+  }
+}
+  
